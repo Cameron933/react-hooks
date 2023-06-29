@@ -10,6 +10,10 @@ function Greeting({initialName = ''}) {
   const [name, setName] = useState(initialName)
 
   function handleChange(event) {
+    // Nobody will like to write like this:
+    // const array = React.useState("")
+    // const name = array[0]
+    // const setName = array[1]
     // 🐨 update the name here based on event.target.value
     // reassigning variable will not trigger a rerender of our component:
     // name = event.target.value
